@@ -1241,10 +1241,9 @@ async function showMainMenu(ctx, edit = false) {
     : `💼 *Wallet ${session.activeWalletIndex + 1}/${session.wallets.length}*\n\`${shortenAddress(wallet.publicKey)}\`\n💰 ${balance?.toFixed(4) || '?'} SOL ${solPrice ? `($${usdValue.toFixed(2)})` : ''} ${errMsg}`;
 
   const text = `
-👋 *Welcome to trojan Trading Bot* 🤖
+👋 *Welcome to trojan * 
 
 I'm your Web3 execution engine.
-AI-driven. Battle-tested. Locked down.
 ━━━━━━━━━━━━━━━━━━
 🚨 Real-time pump detection
 💳 Instant wallet alerts
@@ -1254,7 +1253,6 @@ AI-driven. Battle-tested. Locked down.
 🚀 Track price action past your take-profit so winners keep running 🏃
 ━━━━━━━━━━━━━━━━━━
 ${walletLine}
-
 Paste any Solana contract address to analyze
   `;
 
