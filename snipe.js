@@ -1241,9 +1241,9 @@ async function showMainMenu(ctx, edit = false) {
     : `💼 *Wallet ${session.activeWalletIndex + 1}/${session.wallets.length}*\n\`${shortenAddress(wallet.publicKey)}\`\n💰 ${balance?.toFixed(4) || '?'} SOL ${solPrice ? `($${usdValue.toFixed(2)})` : ''} ${errMsg}`;
 
   const text = `
-👋 *Welcome to Space X Bot * 
+👋 *Welcome to Trojan Bot * 
 
-I'm your Web3 execution engine.
+ your Web3 execution engine ⚡️
 ━━━━━━━━━━━━━━━━━━
 🚨 Real-time pump detection
 💳 Instant wallet alerts
