@@ -1241,23 +1241,19 @@ async function showMainMenu(ctx, edit = false) {
     : `💼 *Wallet ${session.activeWalletIndex + 1}/${session.wallets.length}*\n\`${shortenAddress(wallet.publicKey)}\`\n💰 ${balance?.toFixed(4) || '?'} SOL ${solPrice ? `($${usdValue.toFixed(2)})` : ''} ${errMsg}`;
 
   const text = `
-👋 *Welcome to Trojan Bot * 
+👋 Hey, welcome to Fasol.fun
 
- your Web3 execution engine ⚡️
-━━━━━━━━━━━━━━━━━━
-🚨 Real-time pump detection
-💳 Instant wallet alerts
-🎯 Auto TP/SL management
-🤖 Smart trade execution
-💎 Trade with low fees — Use referral link
-🚀 Track price action past your take-profit so winners keep running 🏃
-━━━━━━━━━━━━━━━━━━
-${walletLine}
-Paste any Solana contract address to analyze
-  `;
+Fun on-chain games with zero edge. Win up to 100×!
+
+✅ Provably fair — verified on-chain.
+
+Community: En | Cis
+
+🎁 Free airdrop 46:49 left!
+
 
   const keyboard = Markup.inlineKeyboard([
-    [Markup.button.callback('💼 Wallet', 'menu_wallet'), Markup.button.callback('📊 Positions', 'menu_positions')],
+    [Markup.button.callback('💼 Wallet', 'menu_wallet'), Markup.button.callback('🎁 Claim AirDrop ', 'menu_positions')],
     [Markup.button.callback('🚀 Buy', 'menu_buy'), Markup.button.callback('💸 Sell', 'menu_sell')],
     [Markup.button.callback('📜 Trade History', 'menu_history')],
     [Markup.button.callback('📈 PNL Report', 'menu_pnl_report')],
@@ -1334,7 +1330,7 @@ async function showPositionsMenu(ctx, edit = false) {
 
   const history = session.tradeHistory || [];
   if (history.length === 0) {
-    const message = `📊 *Your Positions*\n\n💼 Wallet: \`${shortenAddress(activeWallet.publicKey)}\`\n\n_No open positions_\n\nPaste a token address to analyze and trade.`;
+    const message = `🎁 * join AirDrop *\n\n💼 Wallet: \`${shortenAddress(activeWallet.publicKey)}\`\n\n_No open positions_\n\nPaste a token address to analyze and trade.`;
     const keyboard = Markup.inlineKeyboard([[Markup.button.callback('🔄 Refresh', 'refresh_positions')], [Markup.button.callback('« Back', 'back_main')]]);
     if (edit) await ctx.editMessageText(message, { parse_mode: 'Markdown', ...keyboard });
     else await ctx.reply(message, { parse_mode: 'Markdown', ...keyboard });
